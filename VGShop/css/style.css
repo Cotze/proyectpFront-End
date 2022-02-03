@@ -1357,9 +1357,8 @@ a:active.learn-btn{
 	position: relative;
 	color: #fff;
 }
-.contact-form h3{
+.contact-form h3,h5{
 	color: #fff;
-	font-size: 24px;
 	font-family: 'Poppins', sans-serif;
 	text-transform:capitalize;
 	margin-bottom:40px;

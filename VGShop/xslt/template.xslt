@@ -185,7 +185,128 @@
 	</xsl:template>
 
 	<xsl:template name="Contacto">
-		<h1>Aqui va la información de contacto</h1>
+		<section  class="contact">
+			<div class="container">
+				<div class="contact-details">
+					<div class="section-header contact-head  text-center">
+						<h2>Contactanos</h2>
+						<p>
+							<xsl:value-of select="Contacto/Descripcion"/>
+						</p>
+					</div>
+					<!--TODO	Falta obtener informacion del xml y concatenarlo-->
+					<div class="contact-content">
+						<div class="row">
+							<div class="col-sm-offset-1 col-sm-5">
+								<div class="single-contact-box">
+									<div class="contact-right">
+										<div class="contact-adress">
+											<div class="contact-office-address">
+												<h3>contact info</h3>
+												<p>
+													125, Park street avenue, Brocklyn, Newyork.
+												</p>
+												<div class="contact-online-address">
+													<div class="single-online-address">
+														<i class="fa fa-phone"></i>
+														+11253678958
+													</div>
+
+													<div class="single-online-address">
+														<i class="fa fa-envelope-o"></i>
+														<span>info@mail.com</span>
+													</div>
+												</div>
+											</div>
+											<div class="contact-office-address">
+												<h3>social partner</h3>
+												<div class="contact-icon">
+													<ul>
+														<li>
+															<a href="#">
+																<i class="fa fa-facebook" aria-hidden="true"></i>
+															</a>
+														</li>
+														<!--/li-->
+														<li>
+															<a href="#">
+																<i class="fa fa-google-plus" aria-hidden="true"></i>
+															</a>
+														</li>
+														<!--/li-->
+														<li>
+															<a href="#">
+																<i class="fa fa-linkedin" aria-hidden="true"></i>
+															</a>
+														</li>
+														<!--/li-->
+														<li>
+															<a href="#">
+																<i class="fa fa-twitter" aria-hidden="true"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="single-contact-box">
+									<div class="contact-form">
+										<h3>Si necesitas mas información</h3>
+										<h5>Mandanos un mensaje</h5>
+										<form>
+											<div class="row">
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname"/>
+													</div>
+												</div>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<input type="text" class="form-control" id="lastname" placeholder="Last Name" name="laststname"/>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<input type="email" class="form-control" id="email" placeholder="Email" name="email"/>
+													</div>
+												</div>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<input type="text" class="form-control" id="phone" placeholder="Phone" name="phone"/>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-group">
+														<textarea class="form-control" rows="7" id="comment" placeholder="Message" ></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="single-contact-btn pull-right">
+														<button class="contact-btn" type="button">send message</button>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
 
 	</xsl:template>
 
