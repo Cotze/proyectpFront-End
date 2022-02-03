@@ -18,11 +18,11 @@ public partial class _Default : System.Web.UI.Page
     {
         if (Request.QueryString["id"] == null)
         {
-            TipoTienda ="0";
+            TipoTienda = "0";
         }
         else
         {
-            TipoTienda=Request.QueryString["id"];
+            TipoTienda = Request.QueryString["id"];
         }
         TransformaXML();
     }

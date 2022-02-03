@@ -155,7 +155,7 @@
 			<div class="container">
 				<div class="service-details">
 					<div class="section-header text-center">
-						<h2>Juegos mas populares de cada compañia</h2>
+						<h2>Juegos mas populares</h2>
 					</div>
 					<div class="service-content-one">
 						<div class="row">
@@ -164,14 +164,6 @@
 									<div class="service-single text-center">
 										<div class="service-img">
 											<img src="{Imagen}" alt="image of service" />
-										</div>
-										<div class="service-txt">
-											<h2>
-												<xsl:value-of select="@Nombre"/>
-											</h2>
-											<p>
-												<xsl:value-of select="Descripcion"/>
-											</p>
 										</div>
 									</div>
 								</div>
@@ -202,52 +194,20 @@
 									<div class="contact-right">
 										<div class="contact-adress">
 											<div class="contact-office-address">
-												<h3>contact info</h3>
+												<h3>Información de contacto</h3>
 												<p>
-													125, Park street avenue, Brocklyn, Newyork.
+													<xsl:value-of select="Contacto/Direccion"/>
 												</p>
 												<div class="contact-online-address">
 													<div class="single-online-address">
 														<i class="fa fa-phone"></i>
-														+11253678958
+														<xsl:value-of select="Contacto/Telefono"/>
 													</div>
 
-													<div class="single-online-address">
-														<i class="fa fa-envelope-o"></i>
-														<span>info@mail.com</span>
-													</div>
+
 												</div>
 											</div>
-											<div class="contact-office-address">
-												<h3>social partner</h3>
-												<div class="contact-icon">
-													<ul>
-														<li>
-															<a href="#">
-																<i class="fa fa-facebook" aria-hidden="true"></i>
-															</a>
-														</li>
-														<!--/li-->
-														<li>
-															<a href="#">
-																<i class="fa fa-google-plus" aria-hidden="true"></i>
-															</a>
-														</li>
-														<!--/li-->
-														<li>
-															<a href="#">
-																<i class="fa fa-linkedin" aria-hidden="true"></i>
-															</a>
-														</li>
-														<!--/li-->
-														<li>
-															<a href="#">
-																<i class="fa fa-twitter" aria-hidden="true"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
+
 
 										</div>
 									</div>
@@ -262,12 +222,12 @@
 											<div class="row">
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname"/>
+														<input type="text" class="form-control" id="firstname" placeholder="Nombre(s)" name="firstname"/>
 													</div>
 												</div>
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="lastname" placeholder="Last Name" name="laststname"/>
+														<input type="text" class="form-control" id="lastname" placeholder="Apellido(s)" name="laststname"/>
 													</div>
 												</div>
 											</div>
@@ -279,21 +239,21 @@
 												</div>
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="phone" placeholder="Phone" name="phone"/>
+														<input type="text" class="form-control" id="phone" placeholder="Teléfono" name="phone"/>
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="form-group">
-														<textarea class="form-control" rows="7" id="comment" placeholder="Message" ></textarea>
+														<textarea class="form-control" rows="7" id="comment" placeholder="Mensaje" ></textarea>
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="single-contact-btn pull-right">
-														<button class="contact-btn" type="button">send message</button>
+														<button class="contact-btn" type="button">Enviar mensaje</button>
 													</div>
 												</div>
 											</div>
