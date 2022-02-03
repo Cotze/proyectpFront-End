@@ -22,7 +22,7 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {
-            TipoTienda=Request.QueryString["id"].ToString();
+            TipoTienda=Request.QueryString["id"];
         }
         TransformaXML();
     }

@@ -2,66 +2,73 @@
 <Tienda>
 	<Opciones>
 		<Opcion Url="/Default.aspx?id=0" Texto="Home" Id="0"></Opcion>
-		<Opcion Url="/Default.aspx?id=1" Texto="Compañias" Id="1"></Opcion>
-		<Opcion Url="/Default.aspx?id=2" Texto="Contacto" Id="2"></Opcion>
-		<Opcion Url="/Default.aspx?id=3" Texto="Cliente" Id="3"></Opcion>
+		<Opcion Url="/Default.aspx?id=1" Texto="Contacto" Id="1"></Opcion>
+		<Opcion Url="/Default.aspx?id=2" Texto="Cliente" Id="2"></Opcion>
 	</Opciones>
 	<Compañias>
-		<tipo Nombre="NINTENDO">
+		<Tipo Nombre="NINTENDO">
+			<DescripcionCompañia><![CDATA[Nintendo Company, Ltd. es una empresa de entretenimiento dedicada a la investigación y desarrollo, producción y distribución de software y hardware de videojuegos, y juegos de cartas, con sede en Kioto, Japón.​]]></DescripcionCompañia>
+			<Logo>images/logo/nintendo.png</Logo>
 			<Juego Nombre="The Legend of Zelda: Breath of the Wild" Orden="1">
-				<Descripcion><![CDATA[Diez mil años antes del comienzo del juego, Hyrule es una civilización avanzada que construyó cuatro enormes máquinas con formas de animales llamadas bestias divinas y una legión de guardianes para protegerse de Ganon. Cuando Ganon regresó, fue derrotado por una princesa con la ayuda de los cuatro campeones y un caballero.]]></Descripcion>
+				<Descripcion><![CDATA[Diez mil años antes del comienzo del juego, Hyrule es una civilización avanzada que construyó cuatro enormes máquinas con formas de animales llamadas bestias divinas y una legión de guardianes para protegerse de Ganon.]]></Descripcion>
 				<Precio>$1,152</Precio>
-				<Imagen>/IMG/zelda.jpg</Imagen>
+				<Imagen>/images/games/TLOZ.jpg</Imagen>
 			</Juego>
 			<Juego Nombre="Mario Kart 8" Orden="2">
 				<Descripcion><![CDATA[Mario Kart 8 cuenta con 32 circuitos, 16 circuitos nuevos y 16 circuitos retro (renovados de otras entregas de Mario Kart), pero con la llegada del DLC en el juego se incorporaron 16 circuitos, divididos en cuatro copas, 9 circuitos Nitro y 7 circuitos Retro.]]></Descripcion>
 				<Precio>$1,188</Precio>
-				<Imagen>/IMG/mk8.jpg</Imagen>
+				<Imagen>/images/games/mk8.jpg</Imagen>
 			</Juego>
 			<Juego Nombre="Pikmin 3 Deluxe" Orden="3">
 				<Descripcion><![CDATA[Cuando la S.S. Drake se acercó a PNF-404, ocurrió un error desconocido, causando una explosión que envió a los tres exploradores en direcciones opuestas. Charlie se despierta en un campo cubierto de nieve y descubre a los Pikmin amarillos, pero solo para que sean emboscados por un monstruo invisible en una cueva.]]></Descripcion>
 				<Precio>$1,189</Precio>
-				<Imagen>/IMG/pk3.jpg</Imagen>
+				<Imagen>/images/games/pikmin3.jpg</Imagen>
 			</Juego>
-		</tipo>
-		<tipo Nombre="Microsoft XBOX">
+		</Tipo>
+		<Tipo Nombre="Microsoft XBOX">
+			<DescripcionCompañia>
+				<![CDATA[Microsoft Corporation (pronunciado en inglés [maikrosoft]) es una empresa tecnológica multinacional con sede en Redmond, Washington, Estados Unidos. Microsoft es un acrónimo de microordenador y software. La empresa desarrolla, fabrica, licencia y da soporte a ordenadores personales, servidores, dispositivos electrónicos y servicios.]]>
+			</DescripcionCompañia>
+			<Logo>images/logo/xbox.png</Logo>
 			<Juego Nombre="Halo: The Master Chief Collection" Orden="1">
 				<Descripcion><![CDATA[Halo: The Master Chief Collection contiene todos los mapas oficiales de multijigador, incluyendo DLC y mapas exclusivos de computadora, de los juegos incluidos jugable con su motor gráfico original. Seis mapas de Halo 2 fueron remasterizados con un motor gráfico modificado para Halo 2 Anniversary.]]></Descripcion>
 				<Precio>$799</Precio>
-				<Imagen>/IMG/halo.jpg</Imagen>
+				<Imagen>/images/games/HTMCC.jpg</Imagen>
 			</Juego>
-			<Juego Name="Gears 5" Orden="2">
+			<Juego Nombre="Gears 5" Orden="2">
 				<Descripcion><![CDATA[El odio de Myrrah por la humanidad y la invasión de Lambent la llevaron a liderar un genocidio contra la humanidad. Kait queda horrorizada al descubrilo.]]></Descripcion>
 				<Precio>$683</Precio>
-				<Imagen>/IMG/g5.jpg</Imagen>
+				<Imagen>/images/games/gears5.jpg</Imagen>
 			</Juego>
-			<Juego Name="Forza Horizon 5" Orden="3">
+			<Juego Nombre="Forza Horizon 5" Orden="3">
 				<Descripcion><![CDATA[Forza Horizon 5 se ambienta en 11 ecosistemas distintos recreados desde México, que van desde campos hasta volcanes nevados, inclusive la gran ciudad de Guanajuato. Según detalla Microsoft y Don Arceta, director de arte del juego, cada ecosistema cambiará según la estación en donde se viva.​ Si se habla de primavera, se ambientará en época de lluvia en las selvas, así también como en el verano, la costa tendrá intensas tormentas. Aunque aún no se detallan si las fotos son reales o no.]]></Descripcion>
 				<Precio>$1,799</Precio>
-				<Imagen>/IMG/fh5.jpg</Imagen>
+				<Imagen>/images/games/Forzahorizon5.jpg</Imagen>
 			</Juego>
-		</tipo>
-		<Tipo Name="SONY PLAYSTATION 5">
-			<Juego Name="Marvel's Spider-Man: Miles Morales" Orden="1">
-				<Descripcion><![CDATA[La narración continúa desde Marvel's Spider-Man y su contenido descargable The City That Never Sleeps ("La Ciudad Que Nunca Duerme"), durante el cual Miles Morales es mordido por una araña genéticamente mejorada y obtiene poderes similares a los de Peter Parker. Un año después del primer juego y su DLC, Miles se ha integrado completamente en el traje negro y rojo como un experimentado Spider-Man mientras defiende a Nueva York de una guerra de pandillas entre una corporación energética y un ejército criminal de alta tecnología. El nuevo hogar de Miles en Harlem está en el corazón de la batalla. Parker le dice a Miles que tiene que ser como su difunto padre y caminar por el camino para convertirse en un héroe para la ciudad de Nueva York.]]></Descripcion>
+		</Tipo>
+		<Tipo Nombre="SONY PLAYSTATION">
+			<DescripcionCompañia><![CDATA[es el nombre de una serie de consolas de videojuegos creadas y desarrolladas por Sony Interactive Entertainment. Han estado presentes en la quinta, sexta, séptima, octava y novena generación de videoconsolas, la compañía promotora está actualmente en el mercado con su PlayStation.]]></DescripcionCompañia>
+			<Logo>images/logo/playstation.png</Logo>
+			<Juego Nombre="Marvel's Spider-Man: Miles Morales" Orden="1">
+				<Descripcion><![CDATA[La narración continúa desde Marvel's Spider-Man y su contenido descargable The City That Never Sleeps ("La Ciudad Que Nunca Duerme"), durante el cual Miles Morales es mordido por una araña genéticamente mejorada y obtiene poderes similares a los de Peter Parker.]]></Descripcion>
 				<Precio>$1,149</Precio>
-				<Imagen>/IMG/spmm.jpg</Imagen>
+				<Imagen>/images/games/SPMM.png</Imagen>
 			</Juego>
-			<Juego Name="Ratchet Y Clank: Una dimensión aparte" Orden="2">
+			<Juego Nombre="Ratchet Y Clank: Una dimensión aparte" Orden="2">
 				<Descripcion><![CDATA[Ratchet & Clank: Rift Apart explorará la historia de Ratchet y Clank mientras atraviesan mundos nuevos y antiguos en diferentes dimensiones para salvar el universo del devastador plan del Dr. Nefarious para dañar la estructura del espacio y el tiempo.]]></Descripcion>
 				<Precio>$1,260</Precio>
-				<Imagen>/IMG/RC.jpg</Imagen>
+				<Imagen>/images/games/RyC.jpg</Imagen>
 			</Juego>
-			<Juego Name="Horizon Forbidden West" Orden="3">
-				<Descripcion><![CDATA[Es un próximo juego de acción desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment en exclusiva para PlayStation 4 y PlayStation 5 es la secuela de Horizon Zero Dawn (2017), y se juega en un mundo abierto post-apocalíptico con una perspectiva en tercera persona. Los jugadores controlan a la protagonista Aloy, una cazadora de máquinas, mientras viaja a un oeste California devastada por tormentas masivas y máquinas mortales. Fue anunciado en el evento de revelación de PlayStation 5 en junio de 2020. Su lanzamiento está programado para el 18 de febrero de 2022.]]></Descripcion>
+			<Juego Nombre="Horizon Forbidden West" Orden="3">
+				<Descripcion><![CDATA[Es un próximo juego de acción desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment en exclusiva para PlayStation 4 y PlayStation 5 es la secuela de Horizon Zero Dawn (2017), y se juega en un mundo abierto post-apocalíptico con una perspectiva en tercera persona.]]></Descripcion>
 				<Precio>$1,619</Precio>
-				<Imagen>/IMG/HFW.jpg</Imagen>
+				<Imagen>/images/games/HFW.jpg</Imagen>
 			</Juego>
 		</Tipo>
 	</Compañias>
 	<Contacto>
-		<NombreTienda>La Esquina</NombreTienda>
-		<Descripcion>Bienvenidos a nuestro restaurante, encontrarás el mejor sabor de Puebla, deliciosos desayunos para comenzar el día y ricas comidas para compartir con los amigos o familia. </Descripcion>
+		<NombreTienda>Retro Game</NombreTienda>
+		<Descripcion>Bienvenidos a nuestra tienda especializada en videojuegos retro, aqui encontrarás la mayor variedad de videojuegos y/o consolas de Puebla, para compartir con los amigos o familia. </Descripcion>
 		<Direccion>Blvd. San Felipe #222 Col. Valle del Ángel, Puebla, Pue.</Direccion>
 		<Telefono>222-333-4553</Telefono>
 		<Imagen>/img/Fachada.jpg</Imagen>
