@@ -7,6 +7,85 @@
 
 	<xsl:template match="Tienda">
 		<html lang="en">
+			<head>
+				<!--font-family-->
+				<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet"/>
+
+				<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+
+				<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
+
+				<!-- for title img -->
+				<link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.png" />
+
+				<!--font-awesome.min.css-->
+				<link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+				<!--linear icon css-->
+				<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"/>
+
+				<!--animate.css-->
+				<link rel="stylesheet" href="css/animate.css"/>
+
+				<!--hover.css-->
+				<link rel="stylesheet" href="css/hover-min.css"/>
+
+				<!--vedio player css-->
+				<link rel="stylesheet" href="css/magnific-popup.css"/>
+
+				<!--owl.carousel.css-->
+				<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+				<link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+
+
+				<!--bootstrap.min.css-->
+				<link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+				<!-- bootsnav -->
+				<link href="assets/css/bootsnav.css" rel="stylesheet" />
+
+				<!--style.css-->
+				<link rel="stylesheet" href="css/style.css"/>
+
+				<!--responsive.css-->
+				<link rel="stylesheet" href="css/responsive.css"/>
+
+				<!-- jaquery link -->
+
+				<script src="js/jquery.js"></script>
+				<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+				<!--modernizr.min.js-->
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+				<!--bootstrap.min.js-->
+				<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+				<!-- bootsnav js -->
+				<script src="js/bootsnav.js"></script>
+
+				<!-- for manu -->
+				<script src="js/jquery.hc-sticky.min.js" type="text/javascript"></script>
+
+
+				<!-- vedio player js -->
+				<script src="js/jquery.magnific-popup.min.js"></script>
+
+
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+				<!--owl.carousel.js-->
+				<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+
+				<!-- counter js -->
+				<script src="js/jquery.counterup.min.js"></script>
+				<script src="js/waypoints.min.js"></script>
+
+				<!--Custom JS-->
+				<script type="text/javascript" src="js/jak-menusearch.js"></script>
+				<script type="text/javascript" src="js/custom.js"></script>
+			</head>
 			<body>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,7 +113,7 @@
 											<xsl:choose>
 												<xsl:when test="$TipoTienda=@Id">
 													<li>
-														<a href="{@Url}" class="activate">
+														<a href="{@Url}" class="active">
 															<xsl:value-of select="@Texto"/>
 														</a>
 													</li>
@@ -157,17 +236,29 @@
 					<div class="section-header text-center">
 						<h2>Juegos mas populares</h2>
 					</div>
+
 					<div class="service-content-one">
 						<div class="row">
 							<xsl:for-each select="Compañias/Tipo/Juego">
 								<div class="col-sm-4 col-xs-12">
-									<div class="service-single text-center">
+									<div class="service-single text-center ">
 										<div class="service-img">
 											<img src="{Imagen}" alt="image of service" />
+											<div class="service-txt">
+												<h2>
+													<a>
+														<xsl:value-of select="@Nombre"/>
+													</a>
+												</h2>
+												<p>
+													Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
 							</xsl:for-each>
+
 						</div>
 					</div>
 				</div>

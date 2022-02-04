@@ -561,10 +561,7 @@ html,body{
 	text-transform: capitalize;
 }
 .we-do-img {
-	width: 250px;
-	height: 250px;
-	margin: auto;
-	align-items: center;
+    margin-right: 5px;
 	border-radius:50%;
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 
@@ -680,7 +677,7 @@ html,body{
 }
 .service-txt h2 a{
 	color:#44454f;	
-	font-size:24px;
+	font-size:16px;
 	font-family: 'Playfair Display', serif;
 	padding: 47px 0 25px;
 }
@@ -1357,8 +1354,9 @@ a:active.learn-btn{
 	position: relative;
 	color: #fff;
 }
-.contact-form h3,h5{
+.contact-form h3{
 	color: #fff;
+	font-size: 24px;
 	font-family: 'Poppins', sans-serif;
 	text-transform:capitalize;
 	margin-bottom:40px;

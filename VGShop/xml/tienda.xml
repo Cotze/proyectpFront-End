@@ -20,7 +20,7 @@
 				<Imagen>/images/games/mk8.jpg</Imagen>
 			</Juego>
 			<Juego Nombre="Pikmin 3 Deluxe" Orden="3">
-				<Descripcion><![CDATA[Cuando la S.S. Drake se acercó a PNF-404, ocurrió un error desconocido, causando una explosión que envió a los tres exploradores en direcciones opuestas. Charlie se despierta en un campo cubierto de nieve y descubre a los Pikmin amarillos, pero solo para que sean emboscados por un monstruo invisible en una cueva.]]></Descripcion>
+				<Descripcion><![CDATA[Cuando la S.S. Drake se acercó a PNF-404, ocurrió un error desconocido, causando una explosión que envió a los tres exploradores en direcciones opuestas.]]></Descripcion>
 				<Precio>$1,189</Precio>
 				<Imagen>/images/games/pikmin3.jpg</Imagen>
 			</Juego>
@@ -31,7 +31,7 @@
 			</DescripcionCompañia>
 			<Logo>images/logo/xbox.png</Logo>
 			<Juego Nombre="Halo: The Master Chief Collection" Orden="1">
-				<Descripcion><![CDATA[Halo: The Master Chief Collection contiene todos los mapas oficiales de multijigador, incluyendo DLC y mapas exclusivos de computadora, de los juegos incluidos jugable con su motor gráfico original. Seis mapas de Halo 2 fueron remasterizados con un motor gráfico modificado para Halo 2 Anniversary.]]></Descripcion>
+				<Descripcion><![CDATA[Halo: The Master Chief Collection contiene todos los mapas oficiales de multijigador, incluyendo DLC y mapas exclusivos de computadora, de los juegos incluidos jugable con su motor gráfico original.]]></Descripcion>
 				<Precio>$799</Precio>
 				<Imagen>/images/games/HTMCC.jpg</Imagen>
 			</Juego>
@@ -41,7 +41,7 @@
 				<Imagen>/images/games/gears5.jpg</Imagen>
 			</Juego>
 			<Juego Nombre="Forza Horizon 5" Orden="3">
-				<Descripcion><![CDATA[Forza Horizon 5 se ambienta en 11 ecosistemas distintos recreados desde México, que van desde campos hasta volcanes nevados, inclusive la gran ciudad de Guanajuato. Según detalla Microsoft y Don Arceta, director de arte del juego, cada ecosistema cambiará según la estación en donde se viva.​ Si se habla de primavera, se ambientará en época de lluvia en las selvas, así también como en el verano, la costa tendrá intensas tormentas. Aunque aún no se detallan si las fotos son reales o no.]]></Descripcion>
+				<Descripcion><![CDATA[Forza Horizon 5 se ambienta en 11 ecosistemas distintos recreados desde México, que van desde campos hasta volcanes nevados, inclusive la gran ciudad de Guanajuato.]]></Descripcion>
 				<Precio>$1,799</Precio>
 				<Imagen>/images/games/Forzahorizon5.jpg</Imagen>
 			</Juego>
@@ -60,7 +60,7 @@
 				<Imagen>/images/games/RyC.jpg</Imagen>
 			</Juego>
 			<Juego Nombre="Horizon Forbidden West" Orden="3">
-				<Descripcion><![CDATA[Es un próximo juego de acción desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment en exclusiva para PlayStation 4 y PlayStation 5 es la secuela de Horizon Zero Dawn (2017), y se juega en un mundo abierto post-apocalíptico con una perspectiva en tercera persona.]]></Descripcion>
+				<Descripcion><![CDATA[Es un próximo juego de acción desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment en exclusiva para PlayStation 4 y PlayStation 5 es la secuela de Horizon Zero Dawn (2017), y se juega en un mundo abierto post-apocalíptico.]]></Descripcion>
 				<Precio>$1,619</Precio>
 				<Imagen>/images/games/HFW.jpg</Imagen>
 			</Juego>
