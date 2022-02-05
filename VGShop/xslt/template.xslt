@@ -246,18 +246,39 @@
 											<img src="{Imagen}" alt="image of service" />
 											<div class="service-txt">
 												<h2>
-													<a>
+													<a href="#">
 														<xsl:value-of select="@Nombre"/>
 													</a>
 												</h2>
-												<p>
-													Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat
-												</p>
 											</div>
 										</div>
 									</div>
 								</div>
 							</xsl:for-each>
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+								Launch demo modal
+							</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											...
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
 
 						</div>
 					</div>
@@ -294,12 +315,8 @@
 														<i class="fa fa-phone"></i>
 														<xsl:value-of select="Contacto/Telefono"/>
 													</div>
-
-
 												</div>
 											</div>
-
-
 										</div>
 									</div>
 								</div>
@@ -309,7 +326,7 @@
 									<div class="contact-form">
 										<h3>Si necesitas mas información</h3>
 										<h5>Mandanos un mensaje</h5>
-										<form>
+										<form id="formBorder">
 											<div class="row">
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
