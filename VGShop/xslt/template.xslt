@@ -293,98 +293,149 @@
 			<div class="container">
 				<div class="contact-details">
 					<div class="section-header contact-head  text-center">
-						<h2>Contactanos</h2>
+						<h2>contact us</h2>
 						<p>
-							<xsl:value-of select="Contacto/Descripcion"/>
+							Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 						</p>
 					</div>
-					<!--TODO	Falta obtener informacion del xml y concatenarlo-->
+					<!--/.section-header-->
 					<div class="contact-content">
 						<div class="row">
-							<div class="col-sm-6 col-xs-12">
-								<div id="google-map">
-									<div id="mapa"></div>
-								</div>
-							</div>
-							<div class="col-sm-offset-1 col-sm-5">
-								<div class="single-contact-box">
-									<div class="contact-right">
-
-										<div class="contact-adress">
-											<div class="contact-office-address">
-												<h3>Información de contacto</h3>
-												<p>
-													<xsl:value-of select="Contacto/Direccion"/>
-												</p>
-												<div class="contact-online-address">
-													<div class="single-online-address">
-														<i class="fa fa-phone"></i>
-														<xsl:value-of select="Contacto/Telefono"/>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-5">
+							<div class="col-sm-7">
 								<div class="single-contact-box">
 									<div class="contact-form">
-										<h3>Si necesitas mas información</h3>
-										<h5>Mandanos un mensaje</h5>
-<<<<<<< HEAD
-										<form id="formBorder">
-=======
-										<form action="Contacto.aspx" method="post" class="tm-contact-form">
->>>>>>> d2cdde7ee3c52513737f22d8a81a072d6fb81d54
+										<h3>Leave us a Massage Here</h3>
+										<form id="formulario">
 											<div class="row">
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="contact_nombre" placeholder="Nombre(s)" name="contact_nombre" required="true"/>
+														<input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname"/>
 													</div>
 												</div>
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="contact_apellido" placeholder="Apellido(s)" name="contact_apellido" required="true"/>
+														<input type="text" class="form-control" id="lastname" placeholder="Last Name" name="laststname"/>
 													</div>
+													<!--/.form-group-->
 												</div>
+												<!--/.col-->
 											</div>
+											<!--/.row-->
 											<div class="row">
-												<div class="col-sm-12 col-xs-12">
+												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="email" class="form-control" id="contact_email" placeholder="Email" name="contact_email" required="true"/>
+														<input type="email" class="form-control" id="email" placeholder="Email" name="email"/>
 													</div>
+													<!--/.form-group-->
 												</div>
+												<!--/.col-->
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<input type="text" class="form-control" id="phone" placeholder="Phone" name="phone"/>
+													</div>
+													<!--/.form-group-->
+												</div>
+												<!--/.col-->
 											</div>
+											<!--/.row-->
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="form-group">
-														<textarea class="form-control" rows="7" id="contact_comment" placeholder="Mensaje" name="contact_comment" required="true"></textarea>
+														<textarea class="form-control" rows="7" id="comment" placeholder="Message" ></textarea>
 													</div>
+													<!--/.form-group-->
 												</div>
+												<!--/.col-->
 											</div>
+											<!--/.row-->
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="single-contact-btn pull-right">
-														<button class="contact-btn" type="button" name="submit">Enviar mensaje</button>
+														<button class="contact-btn" type="button">send message</button>
 													</div>
+													<!--/.single-single-contact-btn-->
 												</div>
+												<!--/.col-->
 											</div>
+											<!--/.row-->
 										</form>
+										<!--/form-->
 									</div>
+									<!--/.contact-form-->
+								</div>
+								<!--/.single-contact-box-->
+							</div>
+							<div class="col-sm-5">
+								<div id="google-map">
+									<div id="mapa">ASASa</div>
 								</div>
 							</div>
+							<!--/.col-->
 						</div>
+						<!--/.row-->
 					</div>
+					<!--/.contact-content-->
 				</div>
+				<!--/.contact-details-->
 			</div>
+			<!--/.container-->
 
 		</section>
-
 	</xsl:template>
 
 	<xsl:template name="Cliente">
-		<h1>Aqui va los comentarios de los clientes</h1>
+		<section class="contact">
+			<div class="container">
+				<div class="contact-details">
+					<div class="section-header contact-head  text-center">
+						<h2>Conocenos</h2>
+
+						<p class="gray-text tm-welcome-description">
+							<text id="direccion" class="gold-text">
+								<![CDATA[Video, Audio, y Drag & Drop]]>
+							</text>
+						</p>
+						<div id="video">
+							<video width="70%" controls="true" poster="/images/games/b1.jpg">
+								<source src="multimedia/anuncio.mp4"></source>
+							</video>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</section>
+		<section class="tm-section row">
+			<h2 class="col-lg-12 margin-bottom-30"><![CDATA[Drag & Drop]]></h2>
+			<div id="cuadro1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)">
+				<div class="cuadradito" id="arrastrable1" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+				<div class="cuadradito" id="arrastrable2" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+				<div class="cuadradito" id="arrastrable3" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+			</div>
+			<div id="cuadro2" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)"></div>
+			<div id="cuadro3" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return clonar(event)"></div>
+			<div id="papelera" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return eliminar(event)"></div>
+		</section>
+
+		<section class="row">
+			<div class="container">
+				<div id="ContenedorAudio">
+					<div id="fotoAudio" style="width: 50%">
+						<hr />
+						<img src="images/games/b3.jpg" width="100%">
+
+						</img>
+						<audio controls="true" style="width: 100%">
+							<source src="/multimedia/audio.mp3"></source>
+						</audio>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	</xsl:template>
 </xsl:stylesheet>

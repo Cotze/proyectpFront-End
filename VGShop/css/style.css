@@ -1465,12 +1465,16 @@ a:active.learn-btn {
         transform: scaleY(1.05);
     }
 
+#video {
+    padding: 120px 0 120px;
+    position: relative;
+}
 /*-------------------------------------
 		14. Contact
 --------------------------------------*/
 .contact {
     padding: 115px 0 120px;
-    background: url(../../assets/images/footer/map.jpg)no-repeat;
+    background: url(../../images/games/b2.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -1500,14 +1504,6 @@ a:active.learn-btn {
     text-transform: capitalize;
     margin-bottom: 40px;
 }
-
-.contact-form h5 {
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    text-transform: capitalize;
-    margin-bottom: 40px;
-}
 /*contact-head */
 
 .contact-content {
@@ -1519,12 +1515,6 @@ a:active.learn-btn {
 .contact-form {
     position: relative;
     margin: 50px 0 0 0;
-}
-
-#formBorder {
-    border: 5px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
 }
 
     .contact-form .form-group {
@@ -1667,7 +1657,6 @@ a:active.learn-btn {
 /*contact-icon*/
 
 /* contact-right */
-
 /*-------------------------------------
 		15. New-project
 --------------------------------------*/
@@ -2585,5 +2574,49 @@ a:active.learn-btn {
         border: 1px solid #7370d8;
         border-radius: 50%;
     }
+
+/*=========== Drag & Drop ==============*/
+.row{
+    margin-left: 100px;
+}
+
+#cuadro1, #cuadro2, #cuadro3, #papelera {
+    float: left;
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#cuadro1 {
+    background: #52c;
+}
+
+#cuadro2 {
+    background: #5f5;
+}
+
+#cuadro3 {
+    background: #f55;
+}
+
+#papelera {
+    background: #5ff;
+}
+
+.cuadradito {
+    background: #f9c777;
+    border: 2px solid #882;
+    width: 5px;
+    height: 5px;
+    padding: 0 10px 15px;
+    margin: 5px;
+}
+
+/*============= Imagen down Drag&Drop =================*/
+#fotoAudio {
+    display: block;
+    margin: auto;
+}
 
 /*========================Thank you=================

@@ -10,10 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-<<<<<<< HEAD
-=======
             <h1>Pasaste tu informacion</h1>
->>>>>>> d2cdde7ee3c52513737f22d8a81a072d6fb81d54
         </div>
     </form>
 </body>
