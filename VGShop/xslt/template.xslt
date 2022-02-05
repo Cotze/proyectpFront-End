@@ -280,9 +280,15 @@
 					<!--TODO	Falta obtener informacion del xml y concatenarlo-->
 					<div class="contact-content">
 						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<div id="google-map">
+									<div id="mapa"></div>
+								</div>
+							</div>
 							<div class="col-sm-offset-1 col-sm-5">
 								<div class="single-contact-box">
 									<div class="contact-right">
+
 										<div class="contact-adress">
 											<div class="contact-office-address">
 												<h3>Información de contacto</h3>
@@ -309,42 +315,37 @@
 									<div class="contact-form">
 										<h3>Si necesitas mas información</h3>
 										<h5>Mandanos un mensaje</h5>
-										<form>
+										<form action="Contacto.aspx" method="post" class="tm-contact-form">
 											<div class="row">
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="firstname" placeholder="Nombre(s)" name="firstname"/>
+														<input type="text" class="form-control" id="contact_nombre" placeholder="Nombre(s)" name="contact_nombre" required="true"/>
 													</div>
 												</div>
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<input type="text" class="form-control" id="lastname" placeholder="Apellido(s)" name="laststname"/>
+														<input type="text" class="form-control" id="contact_apellido" placeholder="Apellido(s)" name="contact_apellido" required="true"/>
 													</div>
 												</div>
 											</div>
 											<div class="row">
-												<div class="col-sm-6 col-xs-12">
+												<div class="col-sm-12 col-xs-12">
 													<div class="form-group">
-														<input type="email" class="form-control" id="email" placeholder="Email" name="email"/>
-													</div>
-												</div>
-												<div class="col-sm-6 col-xs-12">
-													<div class="form-group">
-														<input type="text" class="form-control" id="phone" placeholder="Teléfono" name="phone"/>
+														<input type="email" class="form-control" id="contact_email" placeholder="Email" name="contact_email" required="true"/>
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="form-group">
-														<textarea class="form-control" rows="7" id="comment" placeholder="Mensaje" ></textarea>
+														<textarea class="form-control" rows="7" id="contact_comment" placeholder="Mensaje" name="contact_comment" required="true"></textarea>
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="single-contact-btn pull-right">
-														<button class="contact-btn" type="button">Enviar mensaje</button>
+														<button class="contact-btn" type="button" name="submit">Enviar mensaje</button>
 													</div>
 												</div>
 											</div>
