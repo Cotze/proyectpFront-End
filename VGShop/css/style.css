@@ -863,6 +863,11 @@ a:focus.service-btn {
     width: auto;
 }
 
+#imgItem{
+    padding: 15px;
+    width: 200px;
+}
+
 .isotope .item {
     float: left;
     height: 286px;
@@ -918,7 +923,7 @@ a:focus.service-btn {
     transition: .7s;
 }
 
-    .isotope-overlay h3 a, .isotope-overlay a {
+    .isotope-overlay h3, .isotope-overlay a {
         color: #fff;
         font-size: 24px;
         font-family: 'Lato', sans-serif;
@@ -1937,7 +1942,7 @@ a:active.learn-btn {
     background: url(../../assets/images/about/about-banner.jpg)no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 124px 0 144px;
+    padding: 124px 0 50px;
     z-index: 1;
 }
 
@@ -1961,7 +1966,7 @@ a:active.learn-btn {
         position: absolute;
         content: '';
         background: rgba(115,112,216,.6);
-        height: 100%;
+        height: 80%;
         width: 100%;
         top: 0;
         left: 0;
@@ -1987,7 +1992,7 @@ a:active.learn-btn {
 }
 
     .breadcrumb > li + li:before {
-        padding: 0 0px;
+        padding:  0px;
         color: transparent;
         content: "";
     }
@@ -2619,4 +2624,69 @@ a:active.learn-btn {
     margin: auto;
 }
 
+#cuadro1 {
+    float: left;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#img1, #img2, #img3, #img4 {
+    float: left;
+    width: 170px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px;
+    background: red;
+}
+
+#img1 {
+    background: url(/images/icono/gears.png});
+    background-size: cover;
+}
+
+
+#img2 {
+    background: url(/IMG/1.jpg);
+    background-size: cover;
+}
+
+#img3 {
+    background: url(/IMG/13.jpg);
+    background-size: cover;
+}
+
+#img4 {
+    background: url(/IMG/16.jpg);
+    background-size: cover;
+}
+
+#cuadro1 {
+    background: #55f;
+}
+
+#cuadro2 {
+    background: #32b5ba;
+}
+
+
+#cuadro3 {
+    background: #228;
+}
+
+.cuadradito {
+    background: #288;
+    border: 2px solid #882;
+    width: 110px;
+    height: 85px;
+    padding: 0 10px 15px;
+    margin: 5px;
+}
+
+#google-map {
+    height: 350px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
 /*========================Thank you=================

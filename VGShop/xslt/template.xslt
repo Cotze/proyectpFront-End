@@ -50,6 +50,15 @@
 				<!--responsive.css-->
 				<link rel="stylesheet" href="css/responsive.css"/>
 
+				<!--sweetalert-->
+				<link rel="stylesheet" href="css/sweetalert.css"/>
+				<script src="js/sweetalert.min.js"></script>
+
+				<!--dranpanddrop-->
+				<script src="js/dranpanddrop.js"></script>
+				<script type="text/javascript" src="js/geolocalizacion.js"/>
+
+
 				<!-- jaquery link -->
 
 				<script src="js/jquery.js"></script>
@@ -140,6 +149,9 @@
 					</xsl:when>
 					<xsl:when test="$TipoTienda=2">
 						<xsl:call-template name="Cliente"></xsl:call-template>
+					</xsl:when>
+					<xsl:when test="$TipoTienda=3">
+						<xsl:call-template name="Juegos"></xsl:call-template>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:call-template name="Home"></xsl:call-template>
@@ -252,32 +264,35 @@
 												</h2>
 											</div>
 										</div>
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+											click para más información
+										</button>
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+														...
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+														<button type="button" class="btn btn-primary">Save changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-							</xsl:for-each>
-							<!-- Button trigger modal -->
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-								Launch demo modal
-							</button>
 
-							<!-- Modal -->
-							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-										</div>
-										<div class="modal-body">
-											...
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">Save changes</button>
-										</div>
-									</div>
 								</div>
-							</div>
+
+							</xsl:for-each>
+
+
 
 
 						</div>
@@ -289,6 +304,8 @@
 	</xsl:template>
 
 	<xsl:template name="Contacto">
+			<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCWeeateTaYGqsHhNcmoDfT7Us-vLDZVPs&amp;sensor=false&amp;language=en"></script>
+		
 		<section  class="contact">
 			<div class="container">
 				<div class="contact-details">
@@ -305,70 +322,61 @@
 								<div class="single-contact-box">
 									<div class="contact-form">
 										<h3>Leave us a Massage Here</h3>
-										<form id="formulario">
-											<div class="row">
-												<div class="col-sm-6 col-xs-12">
-													<div class="form-group">
-														<input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname"/>
-													</div>
+										<form action="Contacto.aspx" method="post" class="tm-contact-form" oninput="total.value=contact_personas.valueAsNumber+contact_adicionales.valueAsNumber">
+											<div class="col-lg-6 col-md-6">
+
+												<div class="form-group">
+													<labbel class="form-label">Nombre</labbel>
+													<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nombre" required="true" />
 												</div>
-												<div class="col-sm-6 col-xs-12">
-													<div class="form-group">
-														<input type="text" class="form-control" id="lastname" placeholder="Last Name" name="laststname"/>
-													</div>
-													<!--/.form-group-->
+
+												<div class="form-group">
+													<labbel class="form-label">Correo</labbel>
+													<input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Correo electronico" required="true"/>
 												</div>
-												<!--/.col-->
+
+												<div class="form-group">
+													<labbel class="form-label">Número de personas</labbel>
+													<input type="number" id="contact_personas" name="contact_personas" class="form-control" required="true" max="8" min="1" value="1"/>
+												</div>
+
+												<div class="form-group">
+													<labbel class="form-label">Personas adicionales</labbel>
+													<input type="number" id="contact_adicionales" name="contact_adicionales" class="form-control" max="4" min="0" value="0"/>
+												</div>
+
+												<div class="form-group">
+													<labbel class="form-label">Fecha</labbel>
+													<input type="date" id="contact_fecha" name="contact_fecha" class="form-control" required="true" />
+												</div>
+
+												<div class="form-group">
+													<labbel class="form-label">Hora</labbel>
+													<input type="time" id="contact_hora" name="contact_hora" class="form-control" required="true" max="19:00:00" min="08:00:00"/>
+												</div>
+
+												<div class="form-group">
+													<labbel class="form-label">Total de personaes</labbel>
+													<output id="total" class="form-control">1</output>
+												</div>
+
+												<div class="form-group">
+													<button class="tm-more-button" type="submit" name="submit">Hacer reservacion</button>
+												</div>
+
 											</div>
-											<!--/.row-->
-											<div class="row">
-												<div class="col-sm-6 col-xs-12">
-													<div class="form-group">
-														<input type="email" class="form-control" id="email" placeholder="Email" name="email"/>
-													</div>
-													<!--/.form-group-->
+											<div class="col-lg-6 col-md-6">
+												<div id="google-map">
+													<div id="mapa"></div>
 												</div>
-												<!--/.col-->
-												<div class="col-sm-6 col-xs-12">
-													<div class="form-group">
-														<input type="text" class="form-control" id="phone" placeholder="Phone" name="phone"/>
-													</div>
-													<!--/.form-group-->
-												</div>
-												<!--/.col-->
 											</div>
-											<!--/.row-->
-											<div class="row">
-												<div class="col-sm-12">
-													<div class="form-group">
-														<textarea class="form-control" rows="7" id="comment" placeholder="Message" ></textarea>
-													</div>
-													<!--/.form-group-->
-												</div>
-												<!--/.col-->
-											</div>
-											<!--/.row-->
-											<div class="row">
-												<div class="col-sm-12">
-													<div class="single-contact-btn pull-right">
-														<button class="contact-btn" type="button">send message</button>
-													</div>
-													<!--/.single-single-contact-btn-->
-												</div>
-												<!--/.col-->
-											</div>
-											<!--/.row-->
 										</form>
+
 										<!--/form-->
 									</div>
 									<!--/.contact-form-->
 								</div>
 								<!--/.single-contact-box-->
-							</div>
-							<div class="col-sm-5">
-								<div id="google-map">
-									<div id="mapa">ASASa</div>
-								</div>
 							</div>
 							<!--/.col-->
 						</div>
@@ -377,10 +385,40 @@
 					<!--/.contact-content-->
 				</div>
 				<!--/.contact-details-->
+		
 			</div>
 			<!--/.container-->
 
 		</section>
+				<script>
+			<![CDATA[$(document).ready(function(){
+    var timeControl = document.getElementById("contact_hora");
+    var now = new Date(Date.now());
+    var horas = now.getHours();
+    var minutos = now.getMinutes();
+    if( horas < 10){
+        horas = "0" + horas;
+    }
+    if( minutos < 10){
+        minutos = "0" + minutos;
+    }
+    var formatted = horas + ":" + minutos; //09:03
+    // timeControl.value = formatted;
+    // $("#contact_hora").val(formatted);
+    $("#contact_hora").attr("value",formatted);	
+    $("#contact_hora").attr("min",formatted);	
+    var dd = now.getDate();
+    var mm = now.getMonth()+1;
+    var yyyy = now.getFullYear();
+    if(dd<10){dd='0'+dd;}
+    if(mm<10){mm='0'+mm;}
+    var today = yyyy + '-' + mm + '-' + dd; //2022-01-03
+    $("#contact_fecha").attr("min",today);
+    $("#contact_fecha").val(today);
+    getGeo();
+    dibujaMapa(19.347147, -98.852353);
+});]]>
+		</script>
 	</xsl:template>
 
 	<xsl:template name="Cliente">
@@ -409,16 +447,24 @@
 
 
 		</section>
-		<section class="tm-section row">
-			<h2 class="col-lg-12 margin-bottom-30"><![CDATA[Drag & Drop]]></h2>
+		<section>
 			<div id="cuadro1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)">
-				<div class="cuadradito" id="arrastrable1" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
-				<div class="cuadradito" id="arrastrable2" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
-				<div class="cuadradito" id="arrastrable3" draggable="true" ondragstart="start(event)" ondragend="end(event)"></div>
+
+				<div class="cuadradito" id="nombre1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+					Desplasame sobre la imagen
+				</div>
 			</div>
-			<div id="cuadro2" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)"></div>
-			<div id="cuadro3" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return clonar(event)"></div>
-			<div id="papelera" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return eliminar(event)"></div>
+			<div id="img1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion1(event)">
+
+			</div>
+			<div id="img2" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion2(event)">
+
+			</div>
+			<div id="img3" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion3(event)">
+			</div>
+			<div id="img4" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion4(event)">
+
+			</div>
 		</section>
 
 		<section class="row">
@@ -437,5 +483,114 @@
 			</div>
 		</section>
 
+	</xsl:template>
+
+	<xsl:template name="Juegos">
+		<section class="about-part project-part">
+			<div class="container">
+				<div class="about-part-details text-center">
+					<h2>project</h2>
+					<div class="about-part-content">
+						<div class="breadcrumbs">
+							<div class="container">
+								<ol class="breadcrumb">
+									<xsl:for-each select="Compañias/Tipo">
+										<li>
+											<a class="juego active" id="li{@Nombre}" data-identificador="{@Nombre}" style="cursor: pointer;">
+												<xsl:value-of select="@Nombre"/>
+											</a>
+											<span> /</span>
+										</li>
+									</xsl:for-each>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section id="project"  class="project">
+			<div class="container">
+				<div class="project-details">
+					<div class="project-content">
+						<div class="gallery-content">
+							<div class="isotope contenedores" id="{@Nombre}">
+								<div class="row">
+									<div class=" col-md-4 col-sm-12">
+										<xsl:for-each select="Compañias/Tipo/Juego[@Orden= 1]">
+											<div class="item big-height">
+												<img src="{Imagen}" alt="portfolio image"/>
+												<div class="isotope-overlay">
+
+													<h3>
+														<xsl:value-of select="@Nombre"/>
+													</h3>
+													<p>
+														<xsl:value-of select="Descripcion"/>
+														<p>
+															<xsl:value-of select="Precio"/>
+														</p>
+
+													</p>
+												</div>
+											</div>
+
+										</xsl:for-each>
+
+									</div>
+									<div class="col-md-8 col-sm-12">
+
+
+										<div class="row">
+											<div class="col-sm-6 col-xs-12">
+												<xsl:for-each select="Compañias/Tipo/Juego[@Orden> 1]">
+													<div class="item">
+														<img id="imgItem" src="{Imagen}" alt="portfolio image"/>
+														<div class="isotope-overlay">
+
+															<h3>
+																<xsl:value-of select="@Nombre"/>
+															</h3>
+															<p>
+																<xsl:value-of select="Descripcion"/>
+																<p>
+																	<xsl:value-of select="Precio"/>
+																</p>
+
+															</p>
+														</div>
+													</div>
+												</xsl:for-each>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+		<script>
+
+			$(document).ready(function(){
+			$("#liNINTENDO").addClass("active");
+			$(".contenedores").hide();
+			$("#NINTENDO").show();
+			$(".juego").click(function(){
+			$(".contenedores").hide();
+			var nombre = $(this).data("identificador");
+			$(".juego").removeClass("active");
+			$(this).addClass("active");
+			$("#" + nombre).show();
+			});
+			});
+		</script>
 	</xsl:template>
 </xsl:stylesheet>

@@ -4,12 +4,14 @@
 		<Opcion Url="/Default.aspx?id=0" Texto="Home" Id="0"></Opcion>
 		<Opcion Url="/Default.aspx?id=1" Texto="Contacto" Id="1"></Opcion>
 		<Opcion Url="/Default.aspx?id=2" Texto="Cliente" Id="2"></Opcion>
+		<Opcion Url="/Default.aspx?id=3" Texto="Juegos" Id="3"></Opcion>
+		
 	</Opciones>
 	<Compañias>
 		<Tipo Nombre="NINTENDO">
 			<DescripcionCompañia><![CDATA[Nintendo Company, Ltd. es una empresa de entretenimiento dedicada a la investigación y desarrollo, producción y distribución de software y hardware de videojuegos, y juegos de cartas, con sede en Kioto, Japón.​]]></DescripcionCompañia>
 			<Logo>images/logo/nintendo.png</Logo>
-			<Juego Nombre="The Legend of Zelda: Breath of the Wild" Orden="1">
+			<Juego Nombre="The Legend of Zelda: Breath of the Wild" Orden="4">
 				<Descripcion><![CDATA[Diez mil años antes del comienzo del juego, Hyrule es una civilización avanzada que construyó cuatro enormes máquinas con formas de animales llamadas bestias divinas y una legión de guardianes para protegerse de Ganon.]]></Descripcion>
 				<Precio>$1,152</Precio>
 				<Imagen>/images/games/TLOZ.jpg</Imagen>
@@ -24,13 +26,23 @@
 				<Precio>$1,189</Precio>
 				<Imagen>/images/games/pikmin3.jpg</Imagen>
 			</Juego>
+			<Juego Nombre="Pokémon Legends: Arceus" Orden="1">
+				<Descripcion><![CDATA[Un nuevo juego de Game Freak que combina la acción y la exploración con las raíces de juego de rol de la serie Pokémon; explora vastos territorios naturales para atrapar una variedad de Pokémon y aprende su comportamiento, acercándote sigilosamente y lanzándoles una Poké Ball.]]></Descripcion>
+				<Precio>$1,299</Precio>
+				<Imagen>/images/games/arceus.jpg</Imagen>
+			</Juego>
+			<Juego Nombre="Yu-Gi-Oh: Legacy of the Duelist: Link Evolution" Orden="5">
+				<Descripcion><![CDATA[Construye y personaliza tu Deck con más de 9,000 cartas, la mayor cantidad en cualquier Yu-Gi-Oh..TRADING CARD GAME, y desafía a otros Duelistas.]]></Descripcion>
+				<Precio>$698</Precio>
+				<Imagen>/images/games/yugi.jpg</Imagen>
+			</Juego>
 		</Tipo>
-		<Tipo Nombre="Microsoft XBOX">
+		<Tipo Nombre="XBOX">
 			<DescripcionCompañia>
-				<![CDATA[Microsoft Corporation (pronunciado en inglés [maikrosoft]) es una empresa tecnológica multinacional con sede en Redmond, Washington, Estados Unidos. Microsoft es un acrónimo de microordenador y software. La empresa desarrolla, fabrica, licencia y da soporte a ordenadores personales, servidores, dispositivos electrónicos y servicios.]]>
+				<![CDATA[Microsoft Corporation (pronunciado en inglés maikrosoft) es una empresa tecnológica multinacional con sede en Redmond, Washington, Estados Unidos. Microsoft es un acrónimo de microordenador y software. La empresa desarrolla, fabrica, licencia y da soporte a ordenadores personales, servidores, dispositivos electrónicos y servicios.]]>
 			</DescripcionCompañia>
 			<Logo>images/logo/xbox.png</Logo>
-			<Juego Nombre="Halo: The Master Chief Collection" Orden="1">
+			<Juego Nombre="Halo: The Master Chief Collection" Orden="5">
 				<Descripcion><![CDATA[Halo: The Master Chief Collection contiene todos los mapas oficiales de multijigador, incluyendo DLC y mapas exclusivos de computadora, de los juegos incluidos jugable con su motor gráfico original.]]></Descripcion>
 				<Precio>$799</Precio>
 				<Imagen>/images/games/HTMCC.jpg</Imagen>
@@ -45,11 +57,21 @@
 				<Precio>$1,799</Precio>
 				<Imagen>/images/games/Forzahorizon5.jpg</Imagen>
 			</Juego>
+			<Juego Nombre="Super Lucky’s Tale" Orden="4">
+				<Descripcion><![CDATA[Lucky debe enfrentarse a los malvados Kitty Litter, los traviesos hijos de Jinx, un grupo de villanos autodidactas que es posible que no hayan entendido bien los planes de Jinx.]]></Descripcion>
+				<Precio>$575.40</Precio>
+				<Imagen>/images/games/lucky.jpg</Imagen>
+			</Juego>
+			<Juego Nombre="Gears of War Ultimate Edition" Orden="1">
+				<Descripcion><![CDATA[Remasterizado para una nueva generación. La versión original de Gears of War regresa, remasterizado y modernizado para Xbox One. Este es el juego de disparos que definió la primera generación de juegos en alta definición y ahora está de vuelta mejor que nunca con nuevo contenido incluyendo 5 campañas nunca antes lanzadas en consolas..]]></Descripcion>
+				<Precio>$454.43</Precio>
+				<Imagen>/images/games/gears.jpg</Imagen>
+			</Juego>
 		</Tipo>
 		<Tipo Nombre="SONY PLAYSTATION">
 			<DescripcionCompañia><![CDATA[es el nombre de una serie de consolas de videojuegos creadas y desarrolladas por Sony Interactive Entertainment. Han estado presentes en la quinta, sexta, séptima, octava y novena generación de videoconsolas, la compañía promotora está actualmente en el mercado con su PlayStation.]]></DescripcionCompañia>
 			<Logo>images/logo/playstation.png</Logo>
-			<Juego Nombre="Marvel's Spider-Man: Miles Morales" Orden="1">
+			<Juego Nombre="Marvel's Spider-Man: Miles Morales" Orden="4">
 				<Descripcion><![CDATA[La narración continúa desde Marvel's Spider-Man y su contenido descargable The City That Never Sleeps ("La Ciudad Que Nunca Duerme"), durante el cual Miles Morales es mordido por una araña genéticamente mejorada y obtiene poderes similares a los de Peter Parker.]]></Descripcion>
 				<Precio>$1,149</Precio>
 				<Imagen>/images/games/SPMM.png</Imagen>
@@ -63,6 +85,16 @@
 				<Descripcion><![CDATA[Es un próximo juego de acción desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment en exclusiva para PlayStation 4 y PlayStation 5 es la secuela de Horizon Zero Dawn (2017), y se juega en un mundo abierto post-apocalíptico.]]></Descripcion>
 				<Precio>$1,619</Precio>
 				<Imagen>/images/games/HFW.jpg</Imagen>
+			</Juego>
+			<Juego Nombre="The Last of Us Part II" Orden="1">
+				<Descripcion><![CDATA[Cinco años después de aquel peligroso viaje por un Estados Unidos que ha sido azotado por una pandemia, Ellie y Joel echaron raíces en Jackson, Wyoming. Vivir en una comunidad próspera de supervivientes les dio paz y estabilidad a pesar de la amenaza constante de los infectados y de otros supervivientes más desesperados.]]></Descripcion>
+				<Precio>$1,326.14</Precio>
+				<Imagen>/images/games/tlas2.jpg</Imagen>
+			</Juego>
+			<Juego Nombre="The Last Guardian" Orden="5">
+				<Descripcion><![CDATA[En una tierra extraña y mística, un niño descubre una criatura misteriosa con la que forma un vínculo profundo e inquebrantable. El improbable par debe confiar el uno en el otro para viajar a través de imponen]]></Descripcion>
+				<Precio>$899</Precio>
+				<Imagen>/images/games/tlg.jpg</Imagen>
 			</Juego>
 		</Tipo>
 	</Compañias>
