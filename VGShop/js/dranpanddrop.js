@@ -59,10 +59,9 @@ function descripcion1(e) {
     e.target.appendChild(document.getElementById(elementoArrastrado));
     e.target.style.border = "";
     
-        swal("Un cerdo, un ratón, un puerco espín, un gorila, un elefante y otros animales se reúnen en un teatro koala para una competencia de canto.");
+    swal('The Internet?',
+        'That thing is still around?');
     
-    
-
 }
 function descripcion2(e) {
     var elementoArrastrado = e.dataTransfer.getData("Data");

@@ -80,16 +80,15 @@ function dibujaMapa(lat, longi) {
         //Definir el marcador (de google) en la posición indicada
         var marker = new google.maps.Marker({
             position: myLatLng,
-            title: "Aqui estamos",
-            icon: "http://trnetwork.com.mx/images/logos/trnetwork.jpg"
+            title: "Aqui estamos"
         });
         marker.setMap(map);
         $("#mapa").css("height", 350);
-        //var panorama = new google.maps.StreetViewPanorama(document.getElementById("street"), {
-        //    position: myLatLng, pov: { heading: 90, pitch: 5 }
-        //});
-        //map.setStreetView(panorama);
-        //$("#street").css("height", 300);
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById("street"), {
+            position: myLatLng, pov: { heading: 90, pitch: 5 }
+        });
+        map.setStreetView(panorama);
+        $("#street").css("height", 300);
     }
     if (navigator && navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(localizacion, error);

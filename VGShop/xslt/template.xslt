@@ -144,13 +144,13 @@
 				</section>
 				<!-- Fin del navbar -->
 				<xsl:choose>
-					<xsl:when test="$TipoTienda=1">
+					<xsl:when test="$TipoTienda=3">
 						<xsl:call-template name="Contacto"></xsl:call-template>
 					</xsl:when>
 					<xsl:when test="$TipoTienda=2">
 						<xsl:call-template name="Cliente"></xsl:call-template>
 					</xsl:when>
-					<xsl:when test="$TipoTienda=3">
+					<xsl:when test="$TipoTienda=1">
 						<xsl:call-template name="Juegos"></xsl:call-template>
 					</xsl:when>
 					<xsl:otherwise>
@@ -171,8 +171,7 @@
 							</div>
 							<!--/.col-->
 							<div class="col-sm-5">
-								<div class="foot-menu pull-right
-						">
+								<div class="foot-menu pull-right">
 									<ul>
 										<li >
 											<a href="#">legal</a>
@@ -198,6 +197,7 @@
 	</xsl:template>
 
 	<xsl:template name="Home">
+		<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCWeeateTaYGqsHhNcmoDfT7Us-vLDZVPs&amp;sensor=false&amp;language=en"></script>
 		<section  class="we-do">
 			<div class="container">
 				<div class="we-do-details">
@@ -240,72 +240,31 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section  class="service">
-			<div class="container">
-				<div class="service-details">
-					<div class="section-header text-center">
-						<h2>Juegos mas populares</h2>
+				<h2 class="section-header text-center">Localiza nuestra tienda</h2>
+				<div class="col-lg-6 col-md-6">
+					<div id="google-street">
+						<div id="street"></div>
 					</div>
-
-					<div class="service-content-one">
-						<div class="row">
-							<xsl:for-each select="Compañias/Tipo/Juego">
-								<div class="col-sm-4 col-xs-12">
-									<div class="service-single text-center ">
-										<div class="service-img">
-											<img src="{Imagen}" alt="image of service" />
-											<div class="service-txt">
-												<h2>
-													<a href="#">
-														<xsl:value-of select="@Nombre"/>
-													</a>
-												</h2>
-											</div>
-										</div>
-										<!-- Button trigger modal -->
-										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-											click para más información
-										</button>
-										<!-- Modal -->
-										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-											<div class="modal-dialog">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-													</div>
-													<div class="modal-body">
-														...
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-														<button type="button" class="btn btn-primary">Save changes</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-							</xsl:for-each>
-
-
-
-
-						</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div id="google-map">
+						<div id="mapa"></div>
 					</div>
 				</div>
 			</div>
-
 		</section>
+		<script>
+			<![CDATA[
+			getGeo();
+			dibujaMapa(19.296764,-98.8832785)
+			]]>
+		</script>
+
 	</xsl:template>
 
 	<xsl:template name="Contacto">
-			<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCWeeateTaYGqsHhNcmoDfT7Us-vLDZVPs&amp;sensor=false&amp;language=en"></script>
-		
+
+
 		<section  class="contact">
 			<div class="container">
 				<div class="contact-details">
@@ -365,11 +324,7 @@
 												</div>
 
 											</div>
-											<div class="col-lg-6 col-md-6">
-												<div id="google-map">
-													<div id="mapa"></div>
-												</div>
-											</div>
+											x
 										</form>
 
 										<!--/form-->
@@ -385,12 +340,12 @@
 					<!--/.contact-content-->
 				</div>
 				<!--/.contact-details-->
-		
+
 			</div>
 			<!--/.container-->
 
 		</section>
-				<script>
+		<script>
 			<![CDATA[$(document).ready(function(){
     var timeControl = document.getElementById("contact_hora");
     var now = new Date(Date.now());
@@ -415,7 +370,7 @@
     var today = yyyy + '-' + mm + '-' + dd; //2022-01-03
     $("#contact_fecha").attr("min",today);
     $("#contact_fecha").val(today);
-    getGeo();
+    
     dibujaMapa(19.347147, -98.852353);
 });]]>
 		</script>
@@ -448,14 +403,15 @@
 
 		</section>
 		<section>
+			<h1> Desliza el mando sobre el texto</h1>
 			<div id="cuadro1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)">
 
-				<div class="cuadradito" id="nombre1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
-					Desplasame sobre la imagen
+				<div class="cuadradito" id="nombre1" draggable="true" ondragstart="start(event)" ondragend="end(event)" >
+					
 				</div>
 			</div>
 			<div id="img1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion1(event)">
-
+				
 			</div>
 			<div id="img2" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion2(event)">
 
@@ -486,7 +442,7 @@
 	</xsl:template>
 
 	<xsl:template name="Juegos">
-		<section class="about-part project-part">
+		<!--<section class="about-part project-part">
 			<div class="container">
 				<div class="about-part-details text-center">
 					<h2>project</h2>
@@ -512,41 +468,31 @@
 		</section>
 		<section id="project"  class="project">
 			<div class="container">
-				<div class="project-details">
-					<div class="project-content">
-						<div class="gallery-content">
-							<div class="isotope contenedores" id="{@Nombre}">
-								<div class="row">
-									<div class=" col-md-4 col-sm-12">
-										<xsl:for-each select="Compañias/Tipo/Juego[@Orden= 1]">
-											<div class="item big-height">
-												<img src="{Imagen}" alt="portfolio image"/>
-												<div class="isotope-overlay">
+				<nav class="tm-side-menu">
+					<ul>
+						<xsl:for-each select="Compañias/Tipo">
+							<li>
+								<a id="li{@Nombre}" data-id="{@Nombre}" class="tipomenu" style="cursor:pointer;">
+									<xsl:value-of select="@Nombre"/>
+								</a>
+							</li>
+						</xsl:for-each>
+					</ul>
 
-													<h3>
-														<xsl:value-of select="@Nombre"/>
-													</h3>
-													<p>
-														<xsl:value-of select="Descripcion"/>
-														<p>
-															<xsl:value-of select="Precio"/>
-														</p>
+				</nav>
+				<xsl:for-each select="Compañias/Tipo">
+					<div class="project-details">
+						<div class="project-content">
 
-													</p>
-												</div>
-											</div>
+							<div id="{@Nombre}" class="tipoJuego tm-menu-product-content col-lg-9 col-md-9" style="display:none;">
+								<xsl:for-each select="Juego">
+									<div class="gallery-content">
+										<div class="isotope contenedores">
+											<div class="row">
+												<div class="col-sm-6 col-xs-12">
 
-										</xsl:for-each>
-
-									</div>
-									<div class="col-md-8 col-sm-12">
-
-
-										<div class="row">
-											<div class="col-sm-6 col-xs-12">
-												<xsl:for-each select="Compañias/Tipo/Juego[@Orden> 1]">
 													<div class="item">
-														<img id="imgItem" src="{Imagen}" alt="portfolio image"/>
+														<img id="imgItem" src="{Imagen}" class="imagenplatillo" alt="portfolio image"/>
 														<div class="isotope-overlay">
 
 															<h3>
@@ -561,36 +507,109 @@
 															</p>
 														</div>
 													</div>
-												</xsl:for-each>
+
+												</div>
+
+
 											</div>
+
 										</div>
-
-
 									</div>
-								</div>
-
+								</xsl:for-each>
 							</div>
 						</div>
 					</div>
-				</div>
+
+				</xsl:for-each>
+
 
 			</div>
 
 		</section>
 		<script>
-
-			$(document).ready(function(){
-			$("#liNINTENDO").addClass("active");
-			$(".contenedores").hide();
+			$(document).ready(
+			function(){
 			$("#NINTENDO").show();
-			$(".juego").click(function(){
-			$(".contenedores").hide();
-			var nombre = $(this).data("identificador");
-			$(".juego").removeClass("active");
+			$("#liNINTENDO").addClass("active");
+
+			$(".tipomenu").click(function(){
+			var nombre = $(this).data("id");
+			$(".tipomenu").removeClass("active");
 			$(this).addClass("active");
+			$(".tipoJuego").hide();
 			$("#" + nombre).show();
 			});
+			}
+			);
+		</script>-->
+
+
+		<div id="body">
+			<div id="content">
+				<div id="sidebar">
+					<div>
+						<h3>Categoria</h3>
+						<nav class="tm-side-menu">
+							<ul>
+								<xsl:for-each select="Compañias/Tipo">
+									<li>
+										<a id="li{@Nombre}"  data-id="{@Nombre}" class="tipohome" style="Cursor:pointer;">
+											<xsl:value-of select="@Nombre"/>
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div id="blog">
+					<div id="content">
+						<ul>
+							<xsl:for-each select="Compañias/Tipo">
+								<div id="{@Nombre}" class="tipopelicula">
+									<xsl:for-each select="Juego">
+										<div class="tm-product">
+											<img src="{Imagen}" class="img-fluid img-thumbnail" style="width:245px; height: 300px" />
+											<div class="tm-product-text">
+												<h3 class="tm-product-title">
+													<xsl:value-of select="@Nombre"/>
+												</h3>
+												<p class="tm-product-description">
+													<xsl:value-of select="Descripcion"/>
+													<h3>
+														<a href="#" class="tm-product-price-link tm-handwriting-font">
+															<span class="tm-product-price-currency">
+																<xsl:value-of select="substring(normalize-space(Precio),1,1)"/>
+															</span>
+															<xsl:value-of select="substring(normalize-space(Precio),2,10)"/>
+														</a>
+													</h3>
+												</p>
+											</div>
+										</div>
+									</xsl:for-each>
+								</div>
+							</xsl:for-each>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(
+			function(){
+			$("#NINTENDO").show();
+			$("#liNINTENDO").addClass("active");
+			$(".tipohome").click(function(){
+			var nombre= $(this).data("id");//Caricatura
+			$(".tipohome").removeClass("active");
+			$(this).addClass("active");
+			$(".tipopelicula").hide();
+			$("#" + nombre).show();
 			});
+
+			}
+			);
 		</script>
 	</xsl:template>
 </xsl:stylesheet>

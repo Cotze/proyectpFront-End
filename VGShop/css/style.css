@@ -863,7 +863,7 @@ a:focus.service-btn {
     width: auto;
 }
 
-#imgItem{
+#imgItem {
     padding: 15px;
     width: 200px;
 }
@@ -929,9 +929,9 @@ a:focus.service-btn {
         font-family: 'Lato', sans-serif;
     }
 
-    .isotope-overlay h3 a {
-        margin-top: 20px;
-    }
+        .isotope-overlay h3 a {
+            margin-top: 20px;
+        }
 
     .isotope-overlay p {
         color: #fff;
@@ -1992,7 +1992,7 @@ a:active.learn-btn {
 }
 
     .breadcrumb > li + li:before {
-        padding:  0px;
+        padding: 0px;
         color: transparent;
         content: "";
     }
@@ -2581,7 +2581,7 @@ a:active.learn-btn {
     }
 
 /*=========== Drag & Drop ==============*/
-.row{
+.row {
     margin-left: 100px;
 }
 
@@ -2626,39 +2626,39 @@ a:active.learn-btn {
 
 #cuadro1 {
     float: left;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     padding: 20px;
     margin: 20px;
 }
 
 #img1, #img2, #img3, #img4 {
     float: left;
-    width: 170px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     padding: 20px;
     margin: 20px;
-    background: red;
+
 }
 
 #img1 {
-    background: url(/images/icono/gears.png});
+    background: url(/images/icono/gears.png);
     background-size: cover;
 }
 
 
 #img2 {
-    background: url(/IMG/1.jpg);
+    background: url(/images/icono/pika.png);
     background-size: cover;
 }
 
 #img3 {
-    background: url(/IMG/13.jpg);
+    background: url(/images/icono/spider.png);
     background-size: cover;
 }
 
 #img4 {
-    background: url(/IMG/16.jpg);
+    background: url(/images/icono/tri.png);
     background-size: cover;
 }
 
@@ -2676,17 +2676,24 @@ a:active.learn-btn {
 }
 
 .cuadradito {
-    background: #288;
+    background: url(/images/icono/control.png);
+    background-color:#f5f5fb;
     border: 2px solid #882;
-    width: 110px;
-    height: 85px;
+    width: 131px;
+    height: 130px;
     padding: 0 10px 15px;
     margin: 5px;
 }
 
 #google-map {
-    height: 350px;
-    border: 3px solid #fff;
-    border-radius: 10px;
+    height: 359px;
+    border: 3px solid #000;
+    border-radius: 12px;
+}
+
+#google-street {
+    height: 306px;
+    border: 3px solid #000;
+    border-radius: 12px;
 }
 /*========================Thank you=================
