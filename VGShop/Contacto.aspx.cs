@@ -15,14 +15,15 @@ public partial class Contacto : System.Web.UI.Page
         {
             string from = Request.Form["contact_email"].ToString();
             string nombre = Request.Form["contact_name"].ToString();
+            string apellido = Request.Form["contact_lname"].ToString();
             string personas = Request.Form["contact_personas"].ToString();
-            string extra = Request.Form["contact_adicionales"].ToString();
             string fecha = Request.Form["contact_fecha"].ToString();
             string hora = Request.Form["contact_hora"].ToString();
+            string comment = Request.Form["comment"].ToString();
 
-            string subject = nombre + "Fecha: " + fecha + ". Hora:" + hora + ". Personas: " + (int.Parse(personas) + int.Parse(extra)).ToString();
+            string subject = "Reservacion para " + fecha;
 
-            string mensaje = "El cliene " + nombre + "he realizadouna reservacion para el dia: " + "fecha: " + fecha + "a las: " + hora + " hrs para " + "Personas: " + (int.Parse(personas) + int.Parse(extra).ToString()).ToString();
+            string mensaje = "El cliene " + nombre + apellido + "a realizado una reservacion para el dia: " + "fecha: " + fecha + "a las: " + hora + " hrs para " +  (int.Parse(personas)).ToString() + " personas " + "solicitando lo siguiente: " + comment;
 
             string resultado = sendGmail(from, subject, mensaje);
             lblestado.Text = resultado;
@@ -45,7 +46,7 @@ public partial class Contacto : System.Web.UI.Page
         //Creamos nuestro correo
         MailMessage oMail = new MailMessage();
         oMail.From = new MailAddress(from);
-        oMail.To.Add(new MailAddress("ingdcgt94@gmail.com"));
+        oMail.To.Add(new MailAddress("carlosrodrigoatl@gmail.com"));
         oMail.CC.Add(from);
         oMail.Subject = subject;
         oMail.IsBodyHtml = true;
