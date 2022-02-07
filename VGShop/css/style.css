@@ -833,6 +833,7 @@ a:focus.service-btn {
 
 .project-content {
     margin-top: 62px;
+    
 }
 
 /* project-header  */
@@ -877,7 +878,7 @@ a:focus.service-btn {
 }
 
     .isotope .item.big-height {
-        height: 604px;
+        height: 400px;
     }
     /*.item img*/
     .isotope .item img {
@@ -905,7 +906,7 @@ a:focus.service-btn {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgba(115,112,216,.75);
+    background: rgba(10,10,10,.75);
     display: flex;
     align-items: center;
     text-transform: capitalize;
@@ -1502,15 +1503,21 @@ a:active.learn-btn {
     color: #fff;
 }
 
-.contact-form h3 {
+.contact-form h3{
     color: #fff;
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
     margin-bottom: 40px;
 }
+.form-label{
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
 /*contact-head */
-
 .contact-content {
     padding: 0 0 0 0;
     margin-top: 30px;
@@ -2627,7 +2634,7 @@ a:active.learn-btn {
 #cuadro1 {
     float: left;
     width: 170px;
-    height: 170px;
+    height: 210px;
     padding: 20px;
     margin: 20px;
 }
