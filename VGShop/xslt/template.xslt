@@ -442,108 +442,6 @@
 	</xsl:template>
 
 	<xsl:template name="Juegos">
-		<!--<section class="about-part project-part">
-			<div class="container">
-				<div class="about-part-details text-center">
-					<h2>project</h2>
-					<div class="about-part-content">
-						<div class="breadcrumbs">
-							<div class="container">
-								<ol class="breadcrumb">
-									<xsl:for-each select="Compañias/Tipo">
-										<li>
-											<a class="juego active" id="li{@Nombre}" data-identificador="{@Nombre}" style="cursor: pointer;">
-												<xsl:value-of select="@Nombre"/>
-											</a>
-											<span> /</span>
-										</li>
-									</xsl:for-each>
-								</ol>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section>
-		<section id="project"  class="project">
-			<div class="container">
-				<nav class="tm-side-menu">
-					<ul>
-						<xsl:for-each select="Compañias/Tipo">
-							<li>
-								<a id="li{@Nombre}" data-id="{@Nombre}" class="tipomenu" style="cursor:pointer;">
-									<xsl:value-of select="@Nombre"/>
-								</a>
-							</li>
-						</xsl:for-each>
-					</ul>
-
-				</nav>
-				<xsl:for-each select="Compañias/Tipo">
-					<div class="project-details">
-						<div class="project-content">
-
-							<div id="{@Nombre}" class="tipoJuego tm-menu-product-content col-lg-9 col-md-9" style="display:none;">
-								<xsl:for-each select="Juego">
-									<div class="gallery-content">
-										<div class="isotope contenedores">
-											<div class="row">
-												<div class="col-sm-6 col-xs-12">
-
-													<div class="item">
-														<img id="imgItem" src="{Imagen}" class="imagenplatillo" alt="portfolio image"/>
-														<div class="isotope-overlay">
-
-															<h3>
-																<xsl:value-of select="@Nombre"/>
-															</h3>
-															<p>
-																<xsl:value-of select="Descripcion"/>
-																<p>
-																	<xsl:value-of select="Precio"/>
-																</p>
-
-															</p>
-														</div>
-													</div>
-
-												</div>
-
-
-											</div>
-
-										</div>
-									</div>
-								</xsl:for-each>
-							</div>
-						</div>
-					</div>
-
-				</xsl:for-each>
-
-
-			</div>
-
-		</section>
-		<script>
-			$(document).ready(
-			function(){
-			$("#NINTENDO").show();
-			$("#liNINTENDO").addClass("active");
-
-			$(".tipomenu").click(function(){
-			var nombre = $(this).data("id");
-			$(".tipomenu").removeClass("active");
-			$(this).addClass("active");
-			$(".tipoJuego").hide();
-			$("#" + nombre).show();
-			});
-			}
-			);
-		</script>-->
-
-
 		<div id="body">
 			<div id="content">
 				<div id="sidebar">
@@ -596,7 +494,6 @@
 			</div>
 		</div>
 		<script>
-			$(document).ready(
 			function(){
 			$("#NINTENDO").show();
 			$("#liNINTENDO").addClass("active");
@@ -607,9 +504,6 @@
 			$(".tipopelicula").hide();
 			$("#" + nombre).show();
 			});
-
-			}
-			);
 		</script>
 	</xsl:template>
 </xsl:stylesheet>
