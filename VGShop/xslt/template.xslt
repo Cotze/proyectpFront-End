@@ -283,13 +283,13 @@
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
 														<labbel class="form-label">Nombre</labbel>
-														<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nombre" required="true" />
+														<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nombre(s)" required="true" />
 													</div>
 												</div>
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
 														<labbel class="form-label">Apellido</labbel>
-														<input type="text" id="contact_lname" name="contact_lname" class="form-control" placeholder="Nombre" required="true" />
+														<input type="text" id="contact_lname" name="contact_lname" class="form-control" placeholder="Apellido(s)" required="true" />
 													</div>
 												</div>
 												<div class="col-sm-6 col-xs-12">
@@ -304,12 +304,7 @@
 														<input type="number" id="contact_personas" name="contact_personas" class="form-control" required="true" max="12" min="1" value="1"/>
 													</div>
 												</div>
-												<div class="col-sm-6 col-xs-12">
-													<div class="form-group">
-														<labbel class="form-label">Personas adicionales</labbel>
-														<input type="number" id="contact_adicionales" name="contact_adicionales" class="form-control" max="4" min="0" value="0"/>
-													</div>
-												</div>
+
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
 														<labbel class="form-label">Fecha</labbel>
@@ -318,19 +313,21 @@
 												</div>
 												<div class="col-sm-6 col-xs-12">
 													<div class="form-group">
-														<labbel class="form-label">Hora</labbel>
+														<labbel class="form-label formLabel">Hora</labbel>
 														<input type="time" id="contact_hora" name="contact_hora" class="form-control" required="true" max="21:00:00" min="11:00:00"/>
 													</div>
 												</div>
-												<div class="col-sm-6 col-xs-12">
+
+												<div class="col-sm-12">
+													<div class="form-group">
+														<label class="form-label formLabel"> Comentario</label>
+														<textarea class="form-control" rows="7" id="comment" name="comment" placeholder="Comentario o problema" required="true"></textarea>
+													</div>
+												</div>
+												<div class="col-sm-12 col-xs-12">
 													<div class="form-group">
 														<labbel class="form-label">Total</labbel>
 														<output id="total" class="form-control">1</output>
-													</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="form-group">
-														<textarea class="form-control" rows="7" id="comment" name="comment" placeholder="Comentario o problema" required="true"></textarea>
 													</div>
 												</div>
 												<div class="single-contact-btn pull-right">
@@ -479,58 +476,72 @@
 							<h2>Juegos mas populares</h2>
 							<hr />
 						</div>
-						<div class="col-lg-3 col-md-3">
-							<div class="tm-position-relative margin-bottom-30">
-								<nav class="tm-side-menu">
-									<ul>
-										<xsl:for-each select="Compañias/Tipo">
-											<li>
-												<a class="tipomenu active" id="li{@Nombre}" data-identificador="{@Nombre}" style="cursor: pointer;">
-													<xsl:value-of select="@Nombre"/>
-												</a>
-											</li>
-										</xsl:for-each>
+						<div class="row">
+							<div class="col">
+								<div class="col-lg-3 col-md-3">
+									<div class="tm-position-relative margin-bottom-30">
+										<nav class="tm-side-menu">
+											<ul>
+												<xsl:for-each select="Compañias/Tipo">
 
+													<li>
+														<a class="tipomenu active" id="li{@Nombre}" data-identificador="{@Nombre}" style="cursor: pointer;">
+															<xsl:value-of select="@Nombre"/>
 
-									</ul>
-								</nav>
-							</div>
-						</div>
+														</a>
 
-						<!--Inicio del for-each de las tarjetas-->
-						<xsl:for-each select="Compañias/Tipo">
-							<div class="tm-menu-product-content col-lg-9 col-md-9 contenedores" id="{@Nombre}">
-								<!-- menu content -->
-								<!--for-each anidado para las tarjetas-->
+													</li>
 
-								<div class="project-content">
-									<div class="gallery-content">
-										<div class="isotope">
-											<div class="row">
-												<xsl:for-each select="Juego">
-													<div class="col-md-4 col-sm-12">
-														<div class="item big-height" >
-															<img src="{Imagen}" alt="portfolio image" class="imagenPlatillo" id="imgItem"/>
-															<div class="isotope-overlay">
-																<h3 class="tm-product-title">
-																	<xsl:value-of select="@Nombre"/>
-																</h3>
-																<p class="tm-product-description">
-																	<xsl:value-of select="Descripcion"/>
-																</p>
-																<a>
-																	<xsl:value-of select="Precio"/>
-																</a>
-															</div>
-														</div>
-													</div>
 												</xsl:for-each>
+												
+											</ul>
+										</nav>
+										
+									</div>
+								</div>
+
+							</div>
+							<div class="col">
+								<!--Inicio del for-each de las tarjetas-->
+								<xsl:for-each select="Compañias/Tipo">
+									<div class="tm-menu-product-content col-lg-9 col-md-9 contenedores" id="{@Nombre}">
+										<!-- menu content -->
+										<!--for-each anidado para las tarjetas-->
+
+										<div class="project-content">
+											<div class="gallery-content">
+												<div class="isotope">
+													<div class="row">
+														<xsl:for-each select="Juego">
+															<div class="col-md-4 col-sm-12">
+																<div class="item big-height" >
+																	<img src="{Imagen}" alt="portfolio image" class="imagenPlatillo" id="imgItem"/>
+																	<div class="isotope-overlay">
+																		<h3 class="tm-product-title">
+																			<xsl:value-of select="@Nombre"/>
+																		</h3>
+																		<p class="tm-product-description">
+																			<xsl:value-of select="Descripcion"/>
+																		</p>
+																		<a>
+																			<xsl:value-of select="Precio"/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</xsl:for-each>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</xsl:for-each>
+
 							</div>
-						</xsl:for-each>
+						</div>
+
+
+
 					</div>
 				</section>
 			</div>

@@ -23,7 +23,7 @@ public partial class Contacto : System.Web.UI.Page
 
             string subject = "Reservacion para " + fecha;
 
-            string mensaje = "El cliene " + nombre + apellido + "a realizado una reservacion para el dia: " + "fecha: " + fecha + "a las: " + hora + " hrs para " +  (int.Parse(personas)).ToString() + " personas " + "solicitando lo siguiente: " + comment;
+            string mensaje = "El cliene " + nombre + apellido + " a realizado una reservacion para el dia: "  + fecha + " a las: " + hora + " hrs para " +  (int.Parse(personas)).ToString() + " personas " + "solicitando lo siguiente: " + comment;
 
             string resultado = sendGmail(from, subject, mensaje);
             lblestado.Text = resultado;

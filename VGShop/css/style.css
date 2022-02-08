@@ -1529,7 +1529,7 @@ a:active.learn-btn {
     margin: 50px 0 0 0;
 }
 
-    .contact-form .form-group {
+    .contact-form .form-group .formLabel {
         margin-bottom: 15px;
     }
 
@@ -2670,7 +2670,7 @@ a:active.learn-btn {
 }
 
 #cuadro1 {
-    background: #55f;
+    background-color: transparent;
 }
 
 #cuadro2 {
@@ -2703,4 +2703,11 @@ a:active.learn-btn {
     border: 3px solid #000;
     border-radius: 12px;
 }
+
+.tm-side-menu-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /*========================Thank you=================
