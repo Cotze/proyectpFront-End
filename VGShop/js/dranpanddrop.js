@@ -58,28 +58,29 @@ function descripcion1(e) {
     var elementoArrastrado = e.dataTransfer.getData("Data");
     e.target.appendChild(document.getElementById(elementoArrastrado));
     e.target.style.border = "";
-    
-    swal('The Internet?',
-        'That thing is still around?');
-    
+
+    swal('¿Sabias que?',
+        'Cuando Dom encuentra a su esposa Maria en un estado completamente deplorable, al punto de que él se encarga de sacarla de su miseria al acabar con su vida. Dicho momento tomó inspiración del caso de Terri Schiavo, mujer en estado vegetativo que murió luego de que su esposo consiguiera que ella fuera desconectada para que su vida dejara de ser alargada artificialmente.');
+
 }
 function descripcion2(e) {
     var elementoArrastrado = e.dataTransfer.getData("Data");
     e.target.appendChild(document.getElementById(elementoArrastrado));
     e.target.style.border = "";
-    
-        swal("Una peligrosa conspiración, relacionada con su pasado, persigue a Natasha Romanoff, también conocida como Viuda Negra.");
-    
-   
+
+    swal('¿Sabias que?',
+        'La Pokédex es una enciclopedia electrónica portátil que sirve para registrar automáticamente las fichas de todas las diversas especies Pokémon vistas y capturadas durante el viaje como entrenadores.');
+
 }
 
 function descripcion3(e) {
     var elementoArrastrado = e.dataTransfer.getData("Data");
     e.target.appendChild(document.getElementById(elementoArrastrado));
     e.target.style.border = "";
-    
-        swal("En el futuro, las prisiones funcionan con un sistema de celdas verticales. Los presos de las celdas superiores son alimentados mientras los de abajo mueren de hambre.");
-    
+
+    swal('¿Sabias que?',
+        'Es el héroe de Marvel con más películas. Si contamos las tres películas de los años 70 de Spider - man(Spider - man en acción, Spider - man contraataca y Spider - man: La venganza del Dragon), la trilogía de Raimi, las dos películas de Amazing Spider - man y Spider - man Homecoming, estamos ante el héroe de Marvel que más veces ha protagonizado una cinta de superhéroes.');
+
 
 
 }
@@ -88,10 +89,11 @@ function descripcion4(e) {
     var elementoArrastrado = e.dataTransfer.getData("Data");
     e.target.appendChild(document.getElementById(elementoArrastrado));
     e.target.style.border = "";
-  
-        swal("Grindewald ha logrado escapar y pretende encabezar una revuelta de los magos purasangre para dominar el mundo. Dumbledore, acompañado por su antiguo estudiante Scamander, tratará de evitar que quien fuera su gran amigo cumpla su siniestro propósito");
-    
-   
+
+    swal('¿Sabias que?',
+        'El nombre de Epona, el caballo de Link, proviene de la diosa celta de los caballos llamada precisamente Epona');;
+
+
 }
 
 

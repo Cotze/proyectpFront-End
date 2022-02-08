@@ -101,9 +101,10 @@
 	<Contacto>
 		<NombreTienda>Retro Game</NombreTienda>
 		<Descripcion>Bienvenidos a nuestra tienda especializada en videojuegos retro, aqui encontrarás la mayor variedad de videojuegos y/o consolas de Puebla, para compartir con los amigos o familia. </Descripcion>
-		<Direccion>Blvd. San Felipe #222 Col. Valle del Ángel, Puebla, Pue.</Direccion>
+		<Direccion>Carr Federal México-Cuautla 1 Hacienda Las Palmas I y II 56538 Ixtapaluca, Méx. Mexico</Direccion>
 		<Telefono>222-333-4553</Telefono>
 		<Imagen>/img/Fachada.jpg</Imagen>
-		<Ubicacion></Ubicacion>
+		<Informacion>Si tienes alguna duda o aclaracion favor de llenar el siguiente formulario para agendar una cita recuerda que por pandemia deribado del virus COVID-19 (SARS-CoV-2) estamos recibiendo un número limitado de 12 personas.</Informacion>
+		<Correo>info@retrogame.com.mx</Correo>
 	</Contacto>
 </Tienda>

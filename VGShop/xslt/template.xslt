@@ -263,86 +263,117 @@
 	</xsl:template>
 
 	<xsl:template name="Contacto">
-
-
 		<section  class="contact">
 			<div class="container">
 				<div class="contact-details">
 					<div class="section-header contact-head  text-center">
-						<h2>contact us</h2>
+						<h2>Contactanos</h2>
 						<p>
-							Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							<xsl:value-of select="Contacto/Informacion"/>
 						</p>
 					</div>
-					<!--/.section-header-->
 					<div class="contact-content">
 						<div class="row">
 							<div class="col-sm-7">
 								<div class="single-contact-box">
 									<div class="contact-form">
-										<h3>Leave us a Massage Here</h3>
-										<form action="Contacto.aspx" method="post" class="tm-contact-form" oninput="total.value=contact_personas.valueAsNumber+contact_adicionales.valueAsNumber">
-											<div class="col-lg-6 col-md-6">
-
-												<div class="form-group">
-													<labbel class="form-label">Nombre</labbel>
-													<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nombre" required="true" />
+										<h3>Haz tu reservacion en el siguiente formulario</h3>
+										<form action="Contacto.aspx" method="post" oninput="total.value=contact_personas.valueAsNumber+contact_adicionales.valueAsNumber">
+											<div class="row">
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Nombre</labbel>
+														<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nombre" required="true" />
+													</div>
 												</div>
-
-												<div class="form-group">
-													<labbel class="form-label">Correo</labbel>
-													<input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Correo electronico" required="true"/>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Apellido</labbel>
+														<input type="text" id="contact_lname" name="contact_lname" class="form-control" placeholder="Nombre" required="true" />
+													</div>
 												</div>
-
-												<div class="form-group">
-													<labbel class="form-label">Número de personas</labbel>
-													<input type="number" id="contact_personas" name="contact_personas" class="form-control" required="true" max="8" min="1" value="1"/>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Correo</labbel>
+														<input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Correo electronico" required="true"/>
+													</div>
 												</div>
-
-												<div class="form-group">
-													<labbel class="form-label">Personas adicionales</labbel>
-													<input type="number" id="contact_adicionales" name="contact_adicionales" class="form-control" max="4" min="0" value="0"/>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Número de personas</labbel>
+														<input type="number" id="contact_personas" name="contact_personas" class="form-control" required="true" max="12" min="1" value="1"/>
+													</div>
 												</div>
-
-												<div class="form-group">
-													<labbel class="form-label">Fecha</labbel>
-													<input type="date" id="contact_fecha" name="contact_fecha" class="form-control" required="true" />
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Personas adicionales</labbel>
+														<input type="number" id="contact_adicionales" name="contact_adicionales" class="form-control" max="4" min="0" value="0"/>
+													</div>
 												</div>
-
-												<div class="form-group">
-													<labbel class="form-label">Hora</labbel>
-													<input type="time" id="contact_hora" name="contact_hora" class="form-control" required="true" max="19:00:00" min="08:00:00"/>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Fecha</labbel>
+														<input type="date" id="contact_fecha" name="contact_fecha" class="form-control" required="true" />
+													</div>
 												</div>
-
-												<div class="form-group">
-													<labbel class="form-label">Total de personaes</labbel>
-													<output id="total" class="form-control">1</output>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Hora</labbel>
+														<input type="time" id="contact_hora" name="contact_hora" class="form-control" required="true" max="21:00:00" min="11:00:00"/>
+													</div>
 												</div>
-
-												<div class="form-group">
-													<button class="tm-more-button" type="submit" name="submit">Hacer reservacion</button>
+												<div class="col-sm-6 col-xs-12">
+													<div class="form-group">
+														<labbel class="form-label">Total</labbel>
+														<output id="total" class="form-control">1</output>
+													</div>
 												</div>
-
+												<div class="col-sm-12">
+													<div class="form-group">
+														<textarea class="form-control" rows="7" id="comment" name="comment" placeholder="Comentario o problema" required="true"></textarea>
+													</div>
+												</div>
+												<div class="single-contact-btn pull-right">
+													<div class="form-group">
+														<button class="contact-btn" type="submit" name="submit">Hacer reservacion</button>
+													</div>
+												</div>
 											</div>
-											x
 										</form>
-
-										<!--/form-->
 									</div>
-									<!--/.contact-form-->
 								</div>
-								<!--/.single-contact-box-->
 							</div>
-							<!--/.col-->
-						</div>
-						<!--/.row-->
-					</div>
-					<!--/.contact-content-->
-				</div>
-				<!--/.contact-details-->
+							<div clas="col-sm-5">
+								<div class="col-sm-offset-1 col-sm-5">
+									<div class="single-contact-box">
+										<div class="contact-right">
+											<div class="contact-adress">
+												<div class="contact-office-address">
+													<h3>Información de contacto</h3>
+													<p>
+														<xsl:value-of select="Contacto/Direccion"/>
+													</p>
+													<div class="contact-online-address">
+														<div class="single-online-address">
+															<i class="fa fa-phone"></i>
+															<xsl:value-of select="Contacto/Telefono	"/>
+														</div>
 
+														<div class="single-online-address">
+															<i class="fa fa-envelope-o"></i>
+															<xsl:value-of select="Contacto/Correo	"/>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!--/.container-->
 
 		</section>
 		<script>
@@ -370,8 +401,6 @@
     var today = yyyy + '-' + mm + '-' + dd; //2022-01-03
     $("#contact_fecha").attr("min",today);
     $("#contact_fecha").val(today);
-    
-    dibujaMapa(19.347147, -98.852353);
 });]]>
 		</script>
 	</xsl:template>
@@ -403,15 +432,15 @@
 
 		</section>
 		<section>
-			<h1> Desliza el mando sobre el texto</h1>
+			<h1> Desliza el mando sobre el texto para descubrir un dato sorprendente</h1>
 			<div id="cuadro1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return drop(event)">
 
 				<div class="cuadradito" id="nombre1" draggable="true" ondragstart="start(event)" ondragend="end(event)" >
-					
+
 				</div>
 			</div>
 			<div id="img1" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion1(event)">
-				
+
 			</div>
 			<div id="img2" ondragenter="return enter(event)" ondragover="return over(event)" ondragleave="return leave(event)" ondrop="return descripcion2(event)">
 
@@ -442,68 +471,84 @@
 	</xsl:template>
 
 	<xsl:template name="Juegos">
-		<div id="body">
-			<div id="content">
-				<div id="sidebar">
+		<div class="tm-main-section light-gray-bg">
+			<div class="container" id="main">
+				<section class="tm-section row">
 					<div>
-						<h3>Categoria</h3>
-						<nav class="tm-side-menu">
-							<ul>
-								<xsl:for-each select="Compañias/Tipo">
-									<li>
-										<a id="li{@Nombre}"  data-id="{@Nombre}" class="tipohome" style="Cursor:pointer;">
-											<xsl:value-of select="@Nombre"/>
-										</a>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<div id="blog">
-					<div id="content">
-						<ul>
-							<xsl:for-each select="Compañias/Tipo">
-								<div id="{@Nombre}" class="tipopelicula">
-									<xsl:for-each select="Juego">
-										<div class="tm-product">
-											<img src="{Imagen}" class="img-fluid img-thumbnail" style="width:245px; height: 300px" />
-											<div class="tm-product-text">
-												<h3 class="tm-product-title">
+						<div class="project-header text-left">
+							<h2>Juegos mas populares</h2>
+							<hr />
+						</div>
+						<div class="col-lg-3 col-md-3">
+							<div class="tm-position-relative margin-bottom-30">
+								<nav class="tm-side-menu">
+									<ul>
+										<xsl:for-each select="Compañias/Tipo">
+											<li>
+												<a class="tipomenu active" id="li{@Nombre}" data-identificador="{@Nombre}" style="cursor: pointer;">
 													<xsl:value-of select="@Nombre"/>
-												</h3>
-												<p class="tm-product-description">
-													<xsl:value-of select="Descripcion"/>
-													<h3>
-														<a href="#" class="tm-product-price-link tm-handwriting-font">
-															<span class="tm-product-price-currency">
-																<xsl:value-of select="substring(normalize-space(Precio),1,1)"/>
-															</span>
-															<xsl:value-of select="substring(normalize-space(Precio),2,10)"/>
-														</a>
-													</h3>
-												</p>
+												</a>
+											</li>
+										</xsl:for-each>
+
+
+									</ul>
+								</nav>
+							</div>
+						</div>
+
+						<!--Inicio del for-each de las tarjetas-->
+						<xsl:for-each select="Compañias/Tipo">
+							<div class="tm-menu-product-content col-lg-9 col-md-9 contenedores" id="{@Nombre}">
+								<!-- menu content -->
+								<!--for-each anidado para las tarjetas-->
+
+								<div class="project-content">
+									<div class="gallery-content">
+										<div class="isotope">
+											<div class="row">
+												<xsl:for-each select="Juego">
+													<div class="col-md-4 col-sm-12">
+														<div class="item big-height" >
+															<img src="{Imagen}" alt="portfolio image" class="imagenPlatillo" id="imgItem"/>
+															<div class="isotope-overlay">
+																<h3 class="tm-product-title">
+																	<xsl:value-of select="@Nombre"/>
+																</h3>
+																<p class="tm-product-description">
+																	<xsl:value-of select="Descripcion"/>
+																</p>
+																<a>
+																	<xsl:value-of select="Precio"/>
+																</a>
+															</div>
+														</div>
+													</div>
+												</xsl:for-each>
 											</div>
 										</div>
-									</xsl:for-each>
+									</div>
 								</div>
-							</xsl:for-each>
-						</ul>
+							</div>
+						</xsl:for-each>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
+
 		<script>
-			function(){
-			$("#NINTENDO").show();
+
 			$("#liNINTENDO").addClass("active");
-			$(".tipohome").click(function(){
-			var nombre= $(this).data("id");//Caricatura
-			$(".tipohome").removeClass("active");
+			$(".contenedores").hide();
+			$("#NINTENDO").show();
+			$(".tipomenu").click(function(){
+			$(".contenedores").hide();
+			var nombre = $(this).data("identificador");
+			$(".tipomenu").removeClass("active");
 			$(this).addClass("active");
-			$(".tipopelicula").hide();
 			$("#" + nombre).show();
 			});
+
 		</script>
 	</xsl:template>
 </xsl:stylesheet>
